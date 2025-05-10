@@ -63,6 +63,15 @@ namespace FragranceWebshop_Endpoint
                 options.UseLazyLoadingProxies();
             });
 
+            // Configure CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowFrontend", builder =>
+                    builder.WithOrigins("http://localhost:4200")  // Frontend URL
+                           .AllowAnyHeader()
+                           .AllowAnyMethod());
+            });
+
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -105,6 +114,8 @@ namespace FragranceWebshop_Endpoint
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors("AllowFrontend");
 
             app.UseHttpsRedirection();
 
