@@ -6,6 +6,5 @@ export class Perfum {
     price:number = 0;
     purchaseCount = 0;
 
-    constructor()
 
 }
