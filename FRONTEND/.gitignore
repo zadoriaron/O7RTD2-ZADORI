@@ -1,12 +1,30 @@
-# Navigálj a frontend mappába, ha még nem ott vagy
-cd frontend
+# Node modules
+/node_modules/
 
-# Add hozzá a frontend/.gitignore fájlt a verziókövetéshez
-git add .gitignore
+# Compiled output
+/dist/
+/out-tsc/
 
-# Készíts commit-ot a változtatásról
-git commit -m "Add .gitignore for frontend"
+# Angular environment files
+/src/environments/environment.prod.ts
+/src/environments/environment.ts
 
-# Pushold a változtatásokat a GitHub-ra
-git push origin master
+# IDE/editor settings
+/.vscode/
+/.idea/
 
+# OS-specifikus fájlok
+.DS_Store
+Thumbs.db
+
+# Log fájlok
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Helyi konfigurációk
+/.angular/cache/
+/coverage/
+
+# Git-hez kapcsolódó fájlok
+.gitignore
