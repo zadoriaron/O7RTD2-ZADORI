@@ -1,0 +1,12 @@
+# Navigálj a frontend mappába, ha még nem ott vagy
+cd frontend
+
+# Add hozzá a frontend/.gitignore fájlt a verziókövetéshez
+git add .gitignore
+
+# Készíts commit-ot a változtatásról
+git commit -m "Add .gitignore for frontend"
+
+# Pushold a változtatásokat a GitHub-ra
+git push origin master
+
