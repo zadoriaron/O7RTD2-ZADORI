@@ -4,6 +4,7 @@ using FragranceWebshop_Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FragranceWebshop_Data.Migrations
 {
     [DbContext(typeof(FragranceWebshopDbContext))]
-    partial class FragranceWebshopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250512214749_UpdateImg")]
+    partial class UpdateImg
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

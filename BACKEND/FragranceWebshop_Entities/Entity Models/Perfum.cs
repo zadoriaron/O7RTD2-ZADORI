@@ -13,6 +13,8 @@ namespace FragranceWebshop_Entities.Entity_Models
         public string RecommendedSeason { get; set; }
         public int Price { get; set; }
 
+        public string ImageUrl { get; set; }
+
         public virtual ICollection<Purchase>? Purchases { get; set; }
 
         public Perfum(string perfumName, string recommendedSeason, int price)
