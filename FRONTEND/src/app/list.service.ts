@@ -24,8 +24,15 @@ export class ListService {
         this.perfumes.forEach((p:Perfum) =>
         {
           this.brands.push(p.perfumName.split(":")[0])
+          
         })
+
+        this.getUniqueBrands()
     });
+  }
+
+  getUniqueBrands(): string[] {
+    return Array.from(new Set(this.brands));
   }
   
 
