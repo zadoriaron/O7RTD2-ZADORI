@@ -11,5 +11,7 @@ namespace FragranceWebshop_Entities.Dtos.PerfumDto
         public string PerfumName { get; set; }
         public string RecommendedSeason { get; set; }
         public int Price { get; set; }
+
+        public string ImageUrl { get; set; }
     }
 }

@@ -1,1 +1,11 @@
-<p>product-list works!</p>
+<div class="gridarea">
+    <div class="card" style="width: 25rem; text-align: center; align-items: center; padding: 2rem;" *ngFor="let perfum of listService.perfumes">
+        <img src= {{perfum.imageUrl}} class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{perfum.perfumName}}</h5>
+            <p class="card-text">{{perfum.recommendedSeason}}</p>
+            <button>Vásárlás</button>
+        </div>
+    </div>
+</div>
+

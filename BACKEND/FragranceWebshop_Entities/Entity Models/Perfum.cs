@@ -17,12 +17,13 @@ namespace FragranceWebshop_Entities.Entity_Models
 
         public virtual ICollection<Purchase>? Purchases { get; set; }
 
-        public Perfum(string perfumName, string recommendedSeason, int price)
+        public Perfum(string perfumName, string recommendedSeason, int price, string imageUrl)
         {
             PerfumId = Guid.NewGuid().ToString();
             PerfumName = perfumName;
             RecommendedSeason = recommendedSeason;
             Price = price;
+            ImageUrl = imageUrl;
 
         }
 

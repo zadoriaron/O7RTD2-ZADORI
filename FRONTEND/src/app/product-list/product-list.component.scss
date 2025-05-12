@@ -1,0 +1,19 @@
+.gridarea{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+img{
+    width: 13vw;
+    height: 13vw;
+    object-fit: contain;
+}
+
+button{
+    background-color: rgb(55, 120, 225);
+    color: white;
+}
+
+div{
+    border: 0px;
+}

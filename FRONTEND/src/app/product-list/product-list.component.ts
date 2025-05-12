@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ListService } from '../list.service';
 
 @Component({
   selector: 'app-product-list',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './product-list.component.scss'
 })
 export class ProductListComponent {
+
+
+  constructor(public listService:ListService) {}
+
 
 }

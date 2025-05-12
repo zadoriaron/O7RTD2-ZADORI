@@ -59,7 +59,7 @@ namespace FragranceWebshop_Endpoint
 
             builder.Services.AddDbContext<FragranceWebshopDbContext>(options =>
             {
-                options.UseSqlServer("Server=(localdb)\\NeroliWebshop;Database=NeroliDatabasedotnet ef database update\r\n;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True");
+                options.UseSqlServer("Server=(localdb)\\NeroliWebshop;Database=NeroliDatabase;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True");
                 options.UseLazyLoadingProxies();
             });
 
