@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ListService } from '../list.service';
+import { PurchaseService } from '../purchase.service';
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +11,7 @@ import { ListService } from '../list.service';
 export class ProductListComponent {
 
 
-  constructor(public listService:ListService) {}
+  constructor(public listService:ListService, public purchaseService:PurchaseService) {}
 
 
 }

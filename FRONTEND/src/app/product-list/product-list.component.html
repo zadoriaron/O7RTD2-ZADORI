@@ -4,7 +4,7 @@
         <div class="card-body">
             <h5 class="card-title">{{perfum.perfumName}}</h5>
             <p class="card-text">{{perfum.recommendedSeason}}</p>
-            <button>Vásárlás</button>
+            <button (click) = "purchaseService.makePurchase(perfum.perfumId)">Vásárlás</button>
         </div>
     </div>
 </div>
