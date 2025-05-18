@@ -9,6 +9,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './product-list/product-list.component';
+import { DiagramComponent } from './diagram/diagram.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     FooterComponent,
     HeaderComponent,
     NavigationBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    DiagramComponent
   ],
   imports: [
     BrowserModule,
