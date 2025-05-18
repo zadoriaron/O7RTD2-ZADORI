@@ -69,6 +69,18 @@ namespace FragranceWebshop_Logic.Logic
            dtoProvider.Mapper.Map<PerfumViewDto>(x));
         }
 
+        public IEnumerable<PerfumViewDto> GetPerfumesByBrand(string brand)
+        {
+            return repo.GetAll().Where(x => x.PerfumName.Contains(brand)).Select(x =>
+            dtoProvider.Mapper.Map<PerfumViewDto>(x));
+        }
+
+        public IEnumerable<PerfumViewDto> GetPerfumesByString(string searchString)
+        {
+            return repo.GetAll().Where(x => x.PerfumName.Contains(searchString)).Select(x =>
+            dtoProvider.Mapper.Map<PerfumViewDto>(x));
+        }
+
 
     }
 }

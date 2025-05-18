@@ -12,14 +12,14 @@ export class ListService {
 
   brands:string[] = []
 
-  private apiBaseUrl: string = "https://localhost:7265/api/Perfum/GetAllPerfum";
+  private apiBaseUrl: string = "https://localhost:7265/api/Perfum/";
 
   constructor(private http: HttpClient) { 
     this.loadPerfumes();
   }
 
   loadPerfumes() {
-    this.http.get<Perfum[]>(this.apiBaseUrl).subscribe(x => {
+    this.http.get<Perfum[]>(this.apiBaseUrl + "GetAllPerfum").subscribe(x => {
         this.perfumes = x
         this.perfumes.forEach((p:Perfum) =>
         {
@@ -33,6 +33,31 @@ export class ListService {
 
   getUniqueBrands(): string[] {
     return Array.from(new Set(this.brands));
+  }
+
+  getPerfumesByBrand(brand:string):void
+  {
+    this.http.get<Perfum[]>(this.apiBaseUrl + "PerfumesByBrand", {params: {brand}}).subscribe({
+      next: (response) => {
+        this.perfumes = response
+        console.log("perfume by brand arrived")
+      },
+      error: (err) => {
+        console.log("something went wrong")
+      }
+    })
+  }
+
+  getPerfumesByString(searchString:string)
+  {
+    this.http.get<Perfum[]>(this.apiBaseUrl + "PerfumesByString", {params: {searchString}}).subscribe({
+      next: (response) => {
+        this.perfumes = response
+      },
+      error: (err) => {
+        console.log("something went wrong")
+      }
+    })
   }
   
 

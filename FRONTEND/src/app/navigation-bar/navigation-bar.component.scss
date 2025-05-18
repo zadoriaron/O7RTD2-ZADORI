@@ -1,3 +1,25 @@
 div{
     padding: 1.8rem
 }
+
+@mixin click{
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.clickable1{
+    @include click;
+}
+
+.clickable2 {
+  @include click;
+}
+
+.clickable1:hover{
+    background-color: rgb(54, 140, 239);
+}
+
+
+.clickable2:hover {
+  background-color: #f0f0f0;
+}

@@ -25,8 +25,8 @@ namespace FragranceWebshop_Endpoint.Controllers
         [HttpPost("CreatePurchase")]
         public async Task CreatePurchase(string perfumId)
         {
-            var userid = await userManager.GetUserAsync(User);
-            logic.CreatePurchase(perfumId, userid.Id);
+            var userid = "0";
+            logic.CreatePurchase(perfumId, userid);
         }
 
         [HttpGet("GetAllPurchases")]

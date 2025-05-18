@@ -12,9 +12,7 @@ import { Perfum } from '../perfum';
 })
 export class NavigationBarComponent{
 
-  constructor(public listService: ListService) {
-    
-  }
+  constructor(public listService: ListService) {}
 
 
 }

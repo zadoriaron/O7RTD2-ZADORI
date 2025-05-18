@@ -53,5 +53,19 @@ namespace FragranceWebshop_Endpoint.Controllers
             return logic.GetPerfumesByPriceRange(min, max);
         }
 
+        [HttpGet("PerfumesByBrand")]
+
+        public IEnumerable<PerfumViewDto> PerfumesByBrand(string brand)
+        {
+            return logic.GetPerfumesByBrand(brand);
+        }
+
+        [HttpGet("PerfumesByString")]
+
+        public IEnumerable<PerfumViewDto> PerfumesByString(string searchString)
+        {
+            return logic.GetPerfumesByString(searchString);
+        }
+
     }
 }
