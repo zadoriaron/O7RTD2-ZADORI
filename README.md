@@ -6,6 +6,9 @@
 Parfüm Webshop
 
 ## Funkciólista
+- **Fontos**
+  A grid rendszer miatti elcsúszások okán görgetéssel lehet a táblázatokat, termékeket, statisztikákat megtekinetni
+
 - **Parfümök listázása**
   Listázza az összes parfümöt az adatbázisból és a product-list komponens jeleníti meg.
 
