@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Perfum } from './perfum';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Route, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class ListService {
 
   private apiBaseUrl: string = "https://localhost:7265/api/Perfum/";
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient, private router:Router) { 
     this.loadPerfumes();
   }
 
@@ -29,6 +30,8 @@ export class ListService {
 
         this.getUniqueBrands()
     });
+
+    this.router.navigate([''])
   }
 
   getUniqueBrands(): string[] {
