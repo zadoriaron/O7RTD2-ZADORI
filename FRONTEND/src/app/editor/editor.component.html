@@ -7,16 +7,33 @@
         <th>Név</th>
         <th>Ár</th>
     </thead>
-    <tbody *ngFor = "let perfum of editorService.perfumes">
-        <tr>
+    <tbody>
+        <tr *ngFor = "let perfum of editorService.perfumes">
             <td><img src="{{perfum.imageUrl}}" alt=""></td>
             <td>{{perfum.perfumId}}</td>
             <td>{{perfum.perfumName}}</td>
             <td>{{perfum.price}} Ft</td>
-            <button (click) = "editorService.deletePerfum(perfum.perfumId)">Delete</button>
-            <button (click) = "navigateToInputId(perfum.perfumId)">Modify</button>
+            <td><button class="btn btn-danger" (click) = "editorService.deletePerfum(perfum.perfumId)">Delete</button></td>
+            <td><button class="btn btn-warning" (click) = "navigateToInputId(perfum.perfumId)">Modify</button></td>
         </tr>       
     </tbody>
 </table>
 
 <button (click) = "navigateToInput()">Create New Perfum</button>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Vásárlási Id</th>
+      <th>Vásárlási Dátum</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let purchase of editorService.purchases">
+      <td>{{purchase.purchaseId}}</td>
+      <td>{{purchase.purchaseDate}}</td>
+      <td><button class="btn btn-danger">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
