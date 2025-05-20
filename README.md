@@ -34,7 +34,8 @@ Parfüm Webshop
   Évszakonként megszámolva és megjelenítve, hogy mennyi parfüm érhető el.
 
 - **Szerkesztői felület(Parfüm)**
-  A szerkesztő felületen tudjuk a parfümöket listázni, törölni, újat felvenni vagy az árat módosítani.
+  A szerkesztő felületen tudjuk a parfümöket listázni, törölni, újat felvenni vagy az árat módosítani. Új parfümöt
+  a termék táblázat alatt található gombbal lehet felvenni.
 
 - **Szerkesztői felület(Vásárlások)**
   A vásárlások listázása, törlése lehetséges itt
