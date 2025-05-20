@@ -1,8 +1,19 @@
+<h2>Statisztikák</h2>
+<p>Vásárlási mennyiségek termékenként</p>
 <div *ngFor = "let perfum of listService.perfumes" class="statisticDiv">
     <div class="nameDiv">{{perfum.perfumName}} ({{perfum.purchaseCount}})</div>
     <div class="barDiv" [style.width.px] = "getHeight(perfum.purchaseCount)" [ngStyle]="{
       'border': '1px solid',
       'border-color': getHeight(perfum.purchaseCount) === 0 ? 'white' : 'black'}">
     </div>
-    
 </div>
+
+<p>Termékek átlagos ára</p>
+<div class="priceDiv">{{getAvgPrice()}} Ft</div>
+
+<p>Termékek mennyisége évszakonként</p>
+<div *ngFor="let season of seasonStats" class="seasonDiv">
+  {{ season.name }}: {{ season.counter }} db parfüm
+</div>
+
+

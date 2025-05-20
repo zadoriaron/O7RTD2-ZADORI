@@ -31,6 +31,11 @@ export class ListService {
         this.getUniqueBrands()
     });
 
+    
+  }
+
+  navigateToList()
+  {
     this.router.navigate([''])
   }
 
@@ -49,6 +54,8 @@ export class ListService {
         console.log("something went wrong")
       }
     })
+
+    this.router.navigate([''])
   }
 
   getPerfumesByString(searchString:string)

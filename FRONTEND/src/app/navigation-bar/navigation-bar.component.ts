@@ -18,6 +18,8 @@ export class NavigationBarComponent{
   diagramNavigate()
   {
     this.router.navigate(['/Diagram']);
+    this.listService.loadPerfumes();
+
   }
 
 
