@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ListService } from '../list.service';
 import { Observable } from 'rxjs';
 import { Perfum } from '../perfum';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,12 @@ import { Perfum } from '../perfum';
 })
 export class NavigationBarComponent{
 
-  constructor(public listService: ListService) {}
+  constructor(public listService: ListService, private router:Router) {}
+
+  diagramNavigate()
+  {
+    this.router.navigate(['/Diagram']);
+  }
 
 
 }

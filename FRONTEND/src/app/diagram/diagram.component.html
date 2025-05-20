@@ -1,5 +1,8 @@
-<p>diagram works!</p>
-
-<div>
-    <div ></div>
+<div *ngFor = "let perfum of listService.perfumes" class="statisticDiv">
+    <div class="nameDiv">{{perfum.perfumName}} ({{perfum.purchaseCount}})</div>
+    <div class="barDiv" [style.width.px] = "getHeight(perfum.purchaseCount)" [ngStyle]="{
+      'border': '1px solid',
+      'border-color': getHeight(perfum.purchaseCount) === 0 ? 'white' : 'black'}">
+    </div>
+    
 </div>

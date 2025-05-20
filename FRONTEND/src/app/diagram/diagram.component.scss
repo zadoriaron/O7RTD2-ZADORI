@@ -1,3 +1,15 @@
-.column{
-    background-color: red;
+.statisticDiv
+{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 1rem;
+}
+
+.barDiv{
+  background-color: green;
+}
+
+.nameDiv{
+  font-weight: bold;
+  text-align: center;
 }
