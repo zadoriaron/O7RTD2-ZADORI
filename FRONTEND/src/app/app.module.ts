@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './product-list/product-list.component';
 import { DiagramComponent } from './diagram/diagram.component';
 import { EditorComponent } from './editor/editor.component';
+import { PerfumInputComponent } from './perfum-input/perfum-input.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditorComponent } from './editor/editor.component';
     NavigationBarComponent,
     ProductListComponent,
     DiagramComponent,
-    EditorComponent
+    EditorComponent,
+    PerfumInputComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,22 @@
-<p>editor works!</p>
+<h2>Szerkesztői felület</h2>
+<p>Termékek</p>
+<table class="table table-hover">
+    <thead>
+        <th>Kép</th>
+        <th>Termék Id</th>
+        <th>Név</th>
+        <th>Ár</th>
+    </thead>
+    <tbody *ngFor = "let perfum of editorService.perfumes">
+        <tr>
+            <td><img src="{{perfum.imageUrl}}" alt=""></td>
+            <td>{{perfum.perfumId}}</td>
+            <td>{{perfum.perfumName}}</td>
+            <td>{{perfum.price}} Ft</td>
+            <button (click) = "editorService.deletePerfum(perfum.perfumId)">Delete</button>
+            <button>Modify</button>
+        </tr>       
+    </tbody>
+</table>
+
+<button>Create New Perfum</button>

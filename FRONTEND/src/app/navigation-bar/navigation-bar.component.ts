@@ -24,7 +24,6 @@ export class NavigationBarComponent{
   editorNavigate()
   {
     this.router.navigate(['/Editor'])
-    this.listService.loadPerfumes()
   }
 
 

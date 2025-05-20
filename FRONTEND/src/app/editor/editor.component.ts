@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EditorService } from '../editor.service';
 
 @Component({
   selector: 'app-editor',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './editor.component.scss'
 })
 export class EditorComponent {
+
+  constructor(public editorService:EditorService) {}
+
+
 
 }
