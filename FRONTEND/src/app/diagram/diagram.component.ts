@@ -8,16 +8,11 @@ import { Perfum } from '../perfum';
   templateUrl: './diagram.component.html',
   styleUrl: './diagram.component.scss'
 })
-export class DiagramComponent implements OnInit{
+export class DiagramComponent{
 
   constructor(public listService:ListService) {
       
   }
-  ngOnInit(): void {
-    this.countPerfumesBySeason();
-  }
-
-  
 
   getHeight(count: number): number {
   let maxHeight:number = 800;

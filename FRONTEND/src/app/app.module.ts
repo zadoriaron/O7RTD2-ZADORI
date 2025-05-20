@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './product-list/product-list.component';
 import { DiagramComponent } from './diagram/diagram.component';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DiagramComponent } from './diagram/diagram.component';
     HeaderComponent,
     NavigationBarComponent,
     ProductListComponent,
-    DiagramComponent
+    DiagramComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,

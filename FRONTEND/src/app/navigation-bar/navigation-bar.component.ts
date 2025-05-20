@@ -21,5 +21,11 @@ export class NavigationBarComponent{
     this.listService.loadPerfumes();
   }
 
+  editorNavigate()
+  {
+    this.router.navigate(['/Editor'])
+    this.listService.loadPerfumes()
+  }
+
 
 }
