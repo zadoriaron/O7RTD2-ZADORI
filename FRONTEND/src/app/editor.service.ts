@@ -61,4 +61,13 @@ export class EditorService {
         alert("Parfüm hozzáadva")
      )
   }
+
+  modifyPerfumPrice(id:string, price:number)
+  {
+    let params = new HttpParams()
+    .set('id', id)
+    .set('price', price.toString());
+
+    return this.http.put(this.apiBasePerfum + 'UpdatePerfum', null, { params: params });
+  }
 }

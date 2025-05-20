@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: "", component:ProductListComponent},
   {path: "Diagram", component:DiagramComponent},
   {path:  "Editor", component:EditorComponent},
-  {path: "ParfumInput", component:PerfumInputComponent}
+  {path: "ParfumInput", component:PerfumInputComponent},
+  {path: "ParfumInput/:id", component:PerfumInputComponent}
 ];
 
 @NgModule({
