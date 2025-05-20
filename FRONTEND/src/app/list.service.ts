@@ -67,6 +67,7 @@ export class ListService {
     this.http.get<Perfum[]>(this.apiBaseUrl + "PerfumesByString", {params: {searchString}}).subscribe({
       next: (response) => {
         this.perfumes = response
+        this.router.navigate([''])
       },
       error: (err) => {
         console.log("something went wrong")
