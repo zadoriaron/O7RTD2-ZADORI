@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductListComponent } from './product-list/product-list.component';
 import { DiagramComponent } from './diagram/diagram.component';
 import { EditorComponent } from './editor/editor.component';
+import { PerfumInputComponent } from './perfum-input/perfum-input.component';
 
 const routes: Routes = [
   {path: "", component:ProductListComponent},
   {path: "Diagram", component:DiagramComponent},
-  {path:  "Editor", component:EditorComponent}
+  {path:  "Editor", component:EditorComponent},
+  {path: "ParfumInput", component:PerfumInputComponent}
 ];
 
 @NgModule({

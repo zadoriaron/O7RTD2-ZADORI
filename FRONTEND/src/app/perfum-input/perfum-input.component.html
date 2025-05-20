@@ -1,10 +1,18 @@
-<input type="text" placeholder="Név" [(ngModel)] = "perfumName">
-<input type="text" placeholder="Ajánlott Évszak" [(ngModel)] = "recommendedSeason">
-<input type="number" placeholder="Ár" [(ngModel)] = "price">
-<input type="text" placeholder="Kép Url" [(ngModel)] = "imageUrl">
+<div class="createForm">
+    <input type="text" placeholder="Név" [(ngModel)] = "perfumName">
+    <input type="text" placeholder="Ajánlott Évszak" [(ngModel)] = "recommendedSeason">
+    <input type="number" placeholder="Ár" [(ngModel)] = "price">
+    <input type="text" placeholder="Kép Url" [(ngModel)] = "imageUrl">
 
-<button>Termék felvétele</button>
+    <button (click) = "editorService.createNewPerfum(perfumName, recommendedSeason, price, imageUrl); navigateToEditor()"
+    [disabled] = "checkFill()">Termék felvétele</button>
 
-<input type="Number" placeholder="Új Ár">
+</div>
 
-<button>Ár frissítése</button>
+<div class="createForm">
+    <input type="Number" placeholder="Új Ár">
+    <button [disabled] = "checkFillForModify()">Ár frissítése</button>
+
+</div>
+
+

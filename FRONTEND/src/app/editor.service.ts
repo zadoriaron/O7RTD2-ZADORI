@@ -47,8 +47,18 @@ export class EditorService {
     )
   }
 
-  createNewPerfum(perumName:string, recommendedSeason:string, price:number, imageUrl:string)
+  createNewPerfum(perfumName:string, recommendedSeason:string, price:number, imageUrl:string)
   {
-    
+     let newPerfum = {
+      perfumName: perfumName,
+      recommendedSeason: recommendedSeason,
+      price: price,
+      imageUrl: imageUrl
+     }
+
+     return this.http.post(this.apiBasePerfum + "AddPerfum", newPerfum).subscribe(
+      () => 
+        alert("Parfüm hozzáadva")
+     )
   }
 }
