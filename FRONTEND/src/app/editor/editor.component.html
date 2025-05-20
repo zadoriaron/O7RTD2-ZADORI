@@ -33,7 +33,7 @@
     <tr *ngFor="let purchase of editorService.purchases">
       <td>{{purchase.purchaseId}}</td>
       <td>{{purchase.purchaseDate}}</td>
-      <td><button class="btn btn-danger">Delete</button></td>
+      <td><button class="btn btn-danger" (click) = "editorService.DeletePurchase(purchase.purchaseId)">Delete</button></td>
     </tr>
   </tbody>
 </table>

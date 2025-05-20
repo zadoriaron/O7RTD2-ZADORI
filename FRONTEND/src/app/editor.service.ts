@@ -73,4 +73,21 @@ export class EditorService {
       alert("A parfüm ára módosítva")
     )
   }
+
+  DeletePurchase(id:string)
+  {
+    let params = new HttpParams().set('id', id);
+
+    this.http.delete(this.apiBasePurchase + 'DeletePurchase', { params: params })
+    .subscribe(
+      {
+        next: () =>
+          this.loadPurchases()
+      }
+    )
+      
+        
+    alert("Vásárlás törölve")
+
+  }
 }

@@ -34,5 +34,19 @@ namespace FragranceWebshop_Endpoint.Controllers
         {
             return logic.GetAllPurchases();
         }
+
+        [HttpDelete("DeletePurchase")]
+        public async Task DeletePurchase(string id)
+        {
+            var purchase = logic.GetAllPurchases().FirstOrDefault(x => x.purchaseId == id);
+            if (purchase != null)
+            {
+                logic.DeletePurchaseById(id);
+            }
+            else
+            {
+                throw new Exception("Purchase not found");
+            }
+        }
     }
 }

@@ -27,5 +27,20 @@ namespace FragranceWebshop_Data
             return ctx.purchases;
         }
 
+        public Purchase FindById(string id)
+        {
+            return ctx.purchases.FirstOrDefault(x => x.PurchaseId == id);
+        }
+
+        public void DeleteById(string id)
+        {
+            Purchase purchase = FindById(id);
+            if (purchase != null)
+            {
+                ctx.purchases.Remove(purchase);
+                ctx.SaveChanges();
+            }
+        }
+
     }
 }

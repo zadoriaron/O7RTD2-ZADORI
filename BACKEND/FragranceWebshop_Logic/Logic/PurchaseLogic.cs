@@ -37,6 +37,11 @@ namespace FragranceWebshop_Logic.Logic
 
         }
 
+        public void DeletePurchaseById(string id)
+        {
+            repo.DeleteById(id);
+        }
+
 
     }
 }

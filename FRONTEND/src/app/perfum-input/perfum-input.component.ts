@@ -46,8 +46,8 @@ export class PerfumInputComponent {
 
   navigateToEditor()
   {
-    this.router.navigate(["/Editor"])
     this.editorService.loadPerfums()
+    this.router.navigate(["/Editor"])
   }
 
   ModifyPrice()
