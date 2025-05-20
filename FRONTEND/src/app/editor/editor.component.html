@@ -14,7 +14,7 @@
             <td>{{perfum.perfumName}}</td>
             <td>{{perfum.price}} Ft</td>
             <button (click) = "editorService.deletePerfum(perfum.perfumId)">Delete</button>
-            <button>Modify</button>
+            <button (click) = "navigateToInputId(perfum.perfumId)">Modify</button>
         </tr>       
     </tbody>
 </table>

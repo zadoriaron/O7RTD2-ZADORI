@@ -10,8 +10,8 @@
 </div>
 
 <div class="createForm">
-    <input type="Number" placeholder="Új Ár">
-    <button [disabled] = "checkFillForModify()">Ár frissítése</button>
+    <input type="Number" placeholder="Új Ár" [(ngModel)] = "priceToModify">
+    <button [disabled] = "checkFillForModify()" (click) = "ModifyPrice()">Ár frissítése</button>
 
 </div>
 

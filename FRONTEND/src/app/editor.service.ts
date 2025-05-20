@@ -68,6 +68,9 @@ export class EditorService {
     .set('id', id)
     .set('price', price.toString());
 
-    return this.http.put(this.apiBasePerfum + 'UpdatePerfum', null, { params: params });
+    return this.http.put(this.apiBasePerfum + 'UpdatePerfumPrice', null, { params: params }).subscribe(
+      () => 
+      alert("A parfüm ára módosítva")
+    )
   }
 }

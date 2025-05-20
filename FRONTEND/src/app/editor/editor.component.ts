@@ -15,6 +15,12 @@ export class EditorComponent implements OnInit{
     this.editorService.loadPerfums()
   }
 
+  navigateToInputId(perfumId:string)
+  {
+    this.router.navigate(["/ParfumInput", perfumId])
+  }
+
+
   navigateToInput()
   {
     this.router.navigate(["/ParfumInput"])

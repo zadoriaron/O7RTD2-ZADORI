@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EditorService } from '../editor.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfum-input',
@@ -15,9 +15,9 @@ export class PerfumInputComponent {
   price:number = 0
   imageUrl:string = ""
 
-  constructor(public editorService:EditorService, private router:Router){}
+  priceToModify:number = 0
 
-  isFilled:boolean = false
+  constructor(public editorService:EditorService, private router:Router, private route:ActivatedRoute){}
 
   checkFill():boolean
   {
@@ -33,7 +33,7 @@ export class PerfumInputComponent {
 
   checkFillForModify():boolean
   {
-    if(this.price != 0)
+    if(this.priceToModify != null && this.priceToModify != 0)
     {
       return false
     }
@@ -50,5 +50,10 @@ export class PerfumInputComponent {
     this.editorService.loadPerfums()
   }
 
-
+  ModifyPrice()
+  {
+    let id = this.route.snapshot.paramMap.get('id')!;
+    this.editorService.modifyPerfumPrice(id, this.priceToModify)
+    this.navigateToEditor()
+  }
 }
