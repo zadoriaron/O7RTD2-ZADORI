@@ -3,7 +3,7 @@
         <img src= {{perfum.imageUrl}} class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{perfum.perfumName}}</h5>
-            <p class="card-text">{{perfum.recommendedSeason}}</p>
+            <p class="card-text">{{perfum.price}} Ft</p>
             <button (click) = "purchaseService.makePurchase(perfum.perfumId)">Vásárlás</button>
         </div>
     </div>
