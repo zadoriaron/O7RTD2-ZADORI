@@ -44,29 +44,6 @@ export class DiagramComponent implements OnInit{
     return sumPrice / this.listService.perfumes.length
   }
 
-  seasonStats:Season[] = []
-
-  countPerfumesBySeason() {
-  let seasonMap = new Map<string, number>();
-
-  for (const perfume of this.listService.perfumes) {
-    const season = perfume.recommendedSeason;
-    if (seasonMap.has(season)) {
-      seasonMap.set(season, seasonMap.get(season)! + 1);
-    } else {
-      seasonMap.set(season, 1);
-    }
-  }
-
-  this.seasonStats = Array.from(seasonMap.entries()).map(
-    ([name, counter]) => new Season(name, counter)
-  );
-}
-
-
-
-
-
 
 }
 

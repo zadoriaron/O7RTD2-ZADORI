@@ -3,6 +3,7 @@ import { Perfum } from './perfum';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Route, Router } from '@angular/router';
+import { Season } from './diagram/diagram.component';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,8 @@ export class ListService {
   perfumes:Perfum[] = []
 
   brands:string[] = []
+
+  seasonStats:Season[] = []
 
   private apiBaseUrl: string = "https://localhost:7265/api/Perfum/";
 
@@ -29,6 +32,7 @@ export class ListService {
         })
 
         this.getUniqueBrands()
+        this.countPerfumesBySeason()
     });
 
     
@@ -69,6 +73,23 @@ export class ListService {
       }
     })
   }
+
+  countPerfumesBySeason() {
+  let seasonMap = new Map<string, number>();
+
+  for (const perfume of this.perfumes) {
+    const season = perfume.recommendedSeason;
+    if (seasonMap.has(season)) {
+      seasonMap.set(season, seasonMap.get(season)! + 1);
+    } else {
+      seasonMap.set(season, 1);
+    }
+  }
+
+  this.seasonStats = Array.from(seasonMap.entries()).map(
+    ([name, counter]) => new Season(name, counter)
+  );
+}
   
 
 }

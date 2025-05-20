@@ -19,7 +19,6 @@ export class NavigationBarComponent{
   {
     this.router.navigate(['/Diagram']);
     this.listService.loadPerfumes();
-
   }
 
 

@@ -12,7 +12,7 @@
 <div class="priceDiv">{{getAvgPrice()}} Ft</div>
 
 <p>Termékek mennyisége évszakonként</p>
-<div *ngFor="let season of seasonStats" class="seasonDiv">
+<div *ngFor="let season of listService.seasonStats" class="seasonDiv">
   {{ season.name }}: {{ season.counter }} db parfüm
 </div>
 
